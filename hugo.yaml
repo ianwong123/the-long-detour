@@ -13,23 +13,26 @@ params:
   font: 
     article:
       - Figtree
-      - Atkinson Hyperlegible
+      #- Lexend
+      #- Karla
+
   # Use FontAwesome
   icon_font: false  
 
+  pjax:
+    enable: true
+
   # Menu
   menu:
-    - name: wandering
+    - name: todays-story
       url: ""
-      icon: "f6ec"
+      icon: "f02d"
     - name: the-detour
       url: "the-detour" 
-      #icon: "f279"
-      #icon: "f277"
       icon: "f277"
-    - name: trails-blazed
-      url: "trails-blazed"
-      icon: "f14e"
+    - name: logbook
+      url: "logbook"
+      icon: "f5da"
   # Sidebar 
   sidebar: left
   #toc: false
@@ -45,73 +48,52 @@ params:
 
   banner: "images/banner2.webp"
   avatar: "avatar2.webp"
-
+  
   internal_theme:
     light:
-      --red-0: '#b91c1c'     # Deeper, richer burgundy
-      --red-1: '#be185d'     # Muted magenta
-      --red-2: '#ec4899'     # Soft rose
-      --red-3: '#f97316'     # Burnt orange (key accent)
-      --red-4: '#fdba74'     # Apricot
-      --red-5: '#fef3c7'     # Pale cream
-      --red-5-5: '#fffbf5'   # Barely there blush
-      --red-6: '#fffbea'     # Warm, creamy white
-      --color-red-6-shadow: 'rgba(185, 28, 28, 0.3)'
-      --color-red-3-shadow: 'rgba(253, 115, 22, 0.2)'
+      --red-0: '#a52a2a'     
+      --red-1: '#b34444'     
+      --red-2: '#c05a5a'     
+      --red-3: '#d48a8a'     
+      --red-4: '#e8b8b8'     
+      --red-5: '#f5e0e0'    
+      --red-5-5: '#fbf7f7'   
+      --red-6: '#fefcfc'     
+      --color-red-6-shadow: 'rgba(165, 42, 42, 0.25)'
+      --color-red-3-shadow: 'rgba(179, 68, 68, 0.2)'
 
-      --highlight-nav: '#fdfdfd'
-      --highlight-scrollbar: '#e0e0e0'
+      --highlight-nav: '#faf9f8'
+      --highlight-scrollbar: '#d0c0bd'
       --highlight-background: '#ffffff'
-      --highlight-current-line: '#fafafa'
-      --highlight-selection: '#fdfdfd'
-      --highlight-foreground: '#1f2937' 
-      --highlight-comment: '#6b7280'
-      --highlight-red: '#b91c1c'
-      --highlight-orange: '#ea580c'
-      --highlight-yellow: '#ca8a04'
-      --highlight-green: '#059669'
-      --highlight-aqua: '#0891b2'
-      --highlight-blue: '#2563eb'
-      --highlight-purple: '#7c3aed'
+      --highlight-current-line: '#f8f5f4'
+      --highlight-selection: '#e8d0ce'        
+      --highlight-foreground: '#2d2526'      
+      --highlight-comment: '#7a6e6c'         
+      --highlight-red: '#a52a2a'             
+      --highlight-orange: '#c46b4f'          
+      --highlight-yellow: '#d4a574'          
+      --highlight-green: '#4f7b6b'           
+      --highlight-aqua: '#4a8db5'            
+      --highlight-blue: '#5a7fa5'            
+      --highlight-purple: '#6a4a6a'          
+
     dark:
-      --red-4: 'rgba(236, 72, 153, 0.3)'   # Soft rose glow
-      --red-5: 'rgba(190, 24, 93, 0.1)'    # Deep magenta hint
-      --red-5-5: 'rgba(185, 28, 28, 0.05)' # Subtle burgundy
-      --red-6: 'rgba(255, 251, 234, 0.05)' # Barely there cream
+      --red-4: 'rgba(232, 184, 184, 0.15)'   
+      --red-5: 'rgba(179, 68, 68, 0.1)'      
+      --red-5-5: 'rgba(165, 42, 42, 0.06)'   
+      --red-6: 'rgba(254, 252, 252, 0.05)'   
 
-      --highlight-nav: '#111827'       # Deep navy-blue
-      --highlight-scrollbar: '#1f2937' # Dark gray
-      --highlight-background: '#0f172a' # Deep indigo
-      --highlight-current-line: '#1e293b'
-      --highlight-selection: '#334155'
-      --highlight-foreground: '#e2e8f0'    # Soft, cool white text
-      --highlight-comment: '#94a3b8'       # Muted blue-gray
-      --highlight-red: '#f97316'      # Burnt orange (more prominent)
-      --highlight-orange: '#fb923c'
-      --highlight-yellow: '#facc15'
-      --highlight-green: '#34d399'
-      --highlight-aqua: '#22d3ee'
-      --highlight-blue: '#60a5fa'
-      --highlight-purple: '#a78bfa'
-      --red-4: 'rgba(236, 72, 153, 0.3)'   # Soft rose glow
-      --red-5: 'rgba(190, 24, 93, 0.1)'    # Deep magenta hint
-      --red-5-5: 'rgba(185, 28, 28, 0.05)' # Subtle burgundy
-      --red-6: 'rgba(255, 251, 234, 0.05)' # Barely there cream
-
-      --highlight-nav: '#111827'       # Deep navy-blue, warmer than pure black
-      --highlight-scrollbar: '#1f2937' # Dark gray
-      --highlight-background: '#0f172a' # Deep indigo - creates a cozy, intimate space
-      --highlight-current-line: '#1e293b'  # Slightly lighter than background
-      --highlight-selection: '#334155'     # Medium-dark gray
-      --highlight-foreground: '#e2e8f0'    # Soft, cool white text
-      --highlight-comment: '#94a3b8'       # Muted blue-gray
-      --highlight-red: '#f97316'      # Burnt orange (more prominent in dark mode)
-      --highlight-orange: '#fb923c'   # Warm orange
-      --highlight-yellow: '#facc15'   # Golden yellow
-      --highlight-green: '#34d399'    # Fresh green
-      --highlight-aqua: '#22d3ee'     # Bright teal
-      --highlight-blue: '#60a5fa'     # Cool blue
-      --highlight-purple: '#a78bfa'   # Soft purple
-
-
-    
+      --highlight-nav: '#251f21'
+      --highlight-scrollbar: '#3e3436'
+      --highlight-background: '#151112'       
+      --highlight-current-line: '#251f21'
+      --highlight-selection: '#352a2c'        
+      --highlight-foreground: '#f0e8e5'       
+      --highlight-comment: '#a5938f'          
+      --highlight-red: '#c05a5a'              
+      --highlight-orange: '#d48a6f'           
+      --highlight-yellow: '#d4a574'           
+      --highlight-green: '#5f8b7b'
+      --highlight-aqua: '#5a9dc5'             
+      --highlight-blue: '#6a8fb5'
+      --highlight-purple: '#8a6a8a'           
