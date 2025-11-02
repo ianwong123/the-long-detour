@@ -1,3 +1,5 @@
-wandering: "Wandering"
-the-detour: "The Detour"
-trails-blazed: "Trails Blazed"
+todays-story: "Today's story"
+the-detour: "The detour"
+logbook: "Logbook"
+# Change banner title on Archives page
+archive_a: Logbook
